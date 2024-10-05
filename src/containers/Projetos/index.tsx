@@ -3,7 +3,7 @@ import Titulo from "../../components/Titulo"
 import { Lista } from "./styles"
 
 const Projetos = () => {
-  const projetosArray = new Array(8).fill(0)
+  const projetosArray = new Array(12).fill(0)
 
   return (
     <section>

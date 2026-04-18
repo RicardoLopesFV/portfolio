@@ -1,0 +1,23 @@
+// Base Hue: Um azul/roxo escuro muito sutil (frio)
+$hue-base: 230;
+
+// Paleta de Cores HSL usando CSS Variables para permitir troca de temas futura
+:root {
+  // Backgrounds
+  --bg-primary: hsl(#{$hue-base}, 15%, 8%);
+  --bg-secondary: hsl(#{$hue-base}, 15%, 12%);
+
+  // Textos
+  --text-primary: hsl(#{$hue-base}, 10%, 90%);
+  --text-secondary: hsl(#{$hue-base}, 10%, 65%);
+  --text-muted: hsl(#{$hue-base}, 10%, 40%);
+
+  // Accent Color (Exemplo: Um tom que puxa para o Mauve/Roxo)
+  --accent-hue: 260;
+  --accent-primary: hsl(var(--accent-hue), 80%, 75%);
+  --accent-hover: hsl(var(--accent-hue), 80%, 85%);
+
+  // Tipografia
+  --font-ui: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}

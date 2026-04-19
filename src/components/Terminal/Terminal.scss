@@ -1,0 +1,159 @@
+.terminal {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+
+  &__window {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  }
+
+  &__header {
+    background-color: var(--bg-tertiary);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    // Cores clássicas dos botões de janela MacOS, mas adaptadas à paleta
+    &--close {
+      background-color: #ff5f56;
+    }
+    &--minimize {
+      background-color: #ffbd2e;
+    }
+    &--maximize {
+      background-color: #27c93f;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6rem;
+    padding: 2.5rem 2.5rem 2.5rem 4rem;
+
+    // No celular, a foto fica em cima e o texto embaixo
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 1.5rem;
+    }
+  }
+
+  &__avatar-wrapper {
+    flex-shrink: 0;
+  }
+
+  &__avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover; // Impede que a foto estique
+    border: 2px solid var(--accent-primary); // Borda com a sua cor de sotaque
+    box-shadow: 0 0 20px rgba(180, 160, 255, 0.1); // Brilho subtil em volta da foto
+  }
+
+  &__info {
+    font-family: var(--font-mono);
+    font-size: 0.97rem;
+    font-weight: 300;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__user {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  &__username {
+    color: var(--accent-primary);
+  }
+  &__hostname {
+    color: var(--text-primary);
+  }
+
+  &__divider {
+    color: var(--text-muted);
+    margin: 0.5rem 0 1rem 0;
+    letter-spacing: -1px;
+  }
+
+  &__row {
+    margin-bottom: 0.25rem;
+  }
+
+  &__key {
+    color: var(--accent-primary);
+    font-weight: 600;
+  }
+
+  &__value {
+    color: var(--text-secondary);
+  }
+
+  &__colors {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  &__color-block {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+
+    // Cores inspiradas no Catppuccin para os blocos
+    &--1 {
+      background-color: #ed8796;
+    }
+    &--2 {
+      background-color: #a6da95;
+    }
+    &--3 {
+      background-color: #eed49f;
+    }
+    &--4 {
+      background-color: #8aadf4;
+    }
+    &--5 {
+      background-color: #c6a0f6;
+    }
+    &--6 {
+      background-color: #8bd5ca;
+    }
+  }
+}

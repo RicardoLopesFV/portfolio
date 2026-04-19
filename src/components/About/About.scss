@@ -1,0 +1,80 @@
+.about {
+  width: 100%;
+  max-width: 800px; // Trava a largura para a leitura não ficar cansativa
+  margin: 0 auto 8rem auto; // Centraliza e dá respiro no fundo
+  padding: 0 1rem;
+
+  &__title {
+    font-family: var(--font-mono);
+    color: var(--accent-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.7;
+
+      em {
+        color: var(--text-primary);
+        font-style: normal;
+        text-decoration: underline;
+        text-decoration-color: var(--accent-primary);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+  }
+
+  &__links-title {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  &__link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+  }
+
+  &__link {
+    color: var(--accent-primary);
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+}

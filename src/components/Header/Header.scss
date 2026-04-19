@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 3rem;
 
   &__title {
     font-family: var(--font-mono);
@@ -18,19 +18,36 @@
   }
 
   &__list {
-    color: var(--text-secondary);
     list-style: none;
     display: flex;
     gap: 1rem;
   }
 
-  &__link {
+  &__item {
+    color: var(--text-secondary);
     font-size: 0.97rem;
+  }
+
+  &__link {
+    font-family: var(--font-mono);
+    font-weight: 300;
     transition: color 0.3s ease;
 
     &:hover {
       color: var(--text-primary);
     }
+  }
+
+  &__roles {
+    color: var(--accent-primary);
+    font-family: var(--font-mono);
+    font-weight: 600;
+  }
+
+  &__separator {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.97rem;
   }
 }
 

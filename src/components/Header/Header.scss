@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  &__title {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    &--cursor {
+      color: var(--accent-primary); // Usando a sua cor de sotaque para destacar
+      animation: blink 1s step-end infinite;
+      margin-left: 4px; // Um leve respiro entre o 's' e o '_'
+    }
+  }
+
+  &__list {
+    color: var(--text-secondary);
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__link {
+    font-size: 0.97rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--text-primary);
+    }
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

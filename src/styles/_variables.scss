@@ -1,23 +1,42 @@
-// Base Hue: Um azul/roxo escuro muito sutil (frio)
-$hue-base: 230;
+// Base Hue: Um azul extremamente subtil para evitar que o cinza pareça "sujo"
+$hue-base: 220;
+$sat-base: 4%; // Saturação quase zero (efeito monocromático premium)
 
-// Paleta de Cores HSL usando CSS Variables para permitir troca de temas futura
 :root {
-  // Backgrounds
-  --bg-primary: hsl(#{$hue-base}, 15%, 8%);
-  --bg-secondary: hsl(#{$hue-base}, 15%, 12%);
+  // --- Backgrounds ---
+  // Fundo principal (quase preto total)
+  --bg-primary: hsl(#{$hue-base}, #{$sat-base}, 4%);
+  // Fundo para elementos destacados (Header, Cards)
+  --bg-secondary: hsl(#{$hue-base}, #{$sat-base}, 9%);
+  // Hover states para interações
+  --bg-tertiary: hsl(#{$hue-base}, #{$sat-base}, 14%);
 
-  // Textos
-  --text-primary: hsl(#{$hue-base}, 10%, 90%);
+  // --- Borders ---
+  // Bordas muito subtis para separar secções sem chamar a atenção
+  --border-color: hsl(#{$hue-base}, #{$sat-base}, 16%);
+
+  // --- Textos ---
+  // Texto principal (Branco suave, evita fadiga visual do branco 100%)
+  --text-primary: hsl(#{$hue-base}, 10%, 93%);
+  // Texto descritivo (parágrafos, cargos)
   --text-secondary: hsl(#{$hue-base}, 10%, 65%);
-  --text-muted: hsl(#{$hue-base}, 10%, 40%);
+  // Metadados, datas, ícones secundários
+  --text-muted: hsl(#{$hue-base}, 10%, 45%);
 
-  // Accent Color (Exemplo: Um tom que puxa para o Mauve/Roxo)
-  --accent-hue: 260;
-  --accent-primary: hsl(var(--accent-hue), 80%, 75%);
-  --accent-hover: hsl(var(--accent-hue), 80%, 85%);
+  // --- Accent Color ---
+  // Um tom frio alinhado ao Macchiato, mas dessaturado para o minimalismo
+  --accent-hue: 250;
+  --accent-primary: hsl(var(--accent-hue), 60%, 75%);
+  --accent-hover: hsl(var(--accent-hue), 60%, 85%);
 
-  // Tipografia
+  // --- Tipografia ---
+  // A fonte Inter ou Geist é obrigatória para este estilo visual
   --font-ui: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+
+  // --- Layout ---
+  // 1200px ou 1024px são padrões excelentes para leitura.
+  --layout-max-width: 1024px;
+  // Respiro lateral para telas menores (mobile/tablet)
+  --layout-padding: 1.5rem;
 }

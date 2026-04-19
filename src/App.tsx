@@ -1,7 +1,9 @@
+import { MainLayout } from "./layout/MainLayout";
+
 export const App = () => {
   return (
-    <>
-      <h1>Hello, World!</h1>
-    </>
+    <MainLayout>
+      <section className="hero-section"></section>
+    </MainLayout>
   );
 };

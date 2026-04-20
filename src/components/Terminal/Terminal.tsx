@@ -4,7 +4,7 @@ import profileImg from "../../assets/profile.jpg";
 
 export const Terminal = () => {
   return (
-    <section className="terminal" id="sobre">
+    <section className="terminal" id="terminal">
       <div className="terminal__window">
         {/* Barra superior imitando a janela do SO */}
         <div className="terminal__header">
@@ -87,6 +87,11 @@ export const Terminal = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="terminal__scroll-indicator">
+        <a href="#about">
+          <span>{">"} scroll --down</span>
+        </a>
       </div>
     </section>
   );

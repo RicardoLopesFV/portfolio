@@ -5,6 +5,8 @@
   justify-content: center;
   padding: 2rem 0;
 
+  position: relative;
+
   &__window {
     width: 100%;
     max-width: 900px;
@@ -155,5 +157,43 @@
     &--6 {
       background-color: #8bd5ca;
     }
+  }
+
+  &__scroll-indicator {
+    position: absolute;
+    bottom: 4rem; // Distância do fundo do ecrã
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+
+    user-select: none; // Impede que o texto seja sublinhado/selecionado
+
+    // Chama a animação
+    animation: ghost-pulse 2.5s ease-in-out infinite;
+
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 1rem; // Aumenta a área de clique para facilitar
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--accent-primary); // Acende com a sua cor ao passar o rato
+      animation-play-state: paused; // Para o pulsar quando o rato está em cima
+    }
+  }
+}
+
+@keyframes ghost-pulse {
+  0%,
+  100% {
+    opacity: 0.15; // Quase invisível
+  }
+  50% {
+    opacity: 0.9; // Acende suavemente
   }
 }

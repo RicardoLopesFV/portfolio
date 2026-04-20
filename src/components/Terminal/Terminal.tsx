@@ -89,7 +89,11 @@ export const Terminal = () => {
         </div>
       </div>
       <div className="terminal__scroll-indicator">
-        <a href="#about">
+        <a
+          href="#about"
+          data-scroll-to
+          aria-label="Rolar para a secção Sobre mim"
+        >
           <span>{">"} scroll --down</span>
         </a>
       </div>
